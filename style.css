@@ -1,0 +1,505 @@
+body{
+    font-size: 100%;
+    font-family: Helvetica,sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-stretch:condensed;
+    line-height: 1.5;
+}
+*{
+	box-sizing: border-box;
+}
+.parent{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.full-height{
+  height: 100%;  
+}
+
+.vert-center{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.horz-center{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.horz-center-margin{
+  margin: auto;
+}
+
+.hv-center{
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom-center{
+  position: relative;
+  left: 50%;
+  top:100%;
+  transform: translate(-50%,-0%);	
+}
+
+.verticalLine{
+	border:none;
+	display: inline-block;
+	width: 1px;
+	padding: 0;
+	background-color: white;
+	margin-top: 5px;
+	margin-right: 0;
+}
+#front-verticalLine{
+		height:10px;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 2px;
+    height: 18px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn::after{
+	content: url('http://www.brunomars.com/sites/g/files/g2000001576/f/201602/countryDropDown.png');
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #262626;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.select--fontsize{
+	font-size: 10px;
+}
+.dropdown-content a {
+    color: white;
+    padding: 3px 3px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.dropdown-content a:hover {color:#e60000; }
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropbtn:hover{
+    color: #e60000;
+}
+.sidebar{
+	background-color: #262626;
+	height: 450px;
+	width: 180px;
+	border: 1px solid white;
+	color: white;
+}
+.sidebar--is-open{
+	margin-top: 60px;
+	margin-left:0px;
+	position: fixed;
+}
+.sidebar__heading{
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: bolder;
+	letter-spacing: 1px;
+	background-image: url('http://www.brunomars.com/sites/g/files/g2000001576/f/201602/logo.png');
+	height: 63px;
+	width: 115px;
+}
+.sidebar__heading--position{
+/*	width: 130px;
+*/	padding: 2px;	
+	margin: 4px 4px 4px 4px;
+}
+.sidebar__list{
+	display: inline-block;
+	width: 100px;
+	padding: 10px;
+}
+.sidebar__list a{
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	line-height: 25px;
+	letter-spacing: 1.5px;
+}
+.sidebar__list a:hover{
+	color: #e60000;
+}
+.sidebar__list hr{
+	width: 100%;
+	height: 1px;
+	background-color:#595959;
+	border: none;
+}
+.sidebar__btn{
+	position: absolute;
+	right: -40px;
+	top: 200px;
+	width: 80px;
+	height: 30px;
+	background-color: #262626;
+	border: 1px solid white;
+	padding: 2px;
+	cursor: pointer;
+}
+.sidebar-searchbar{
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	border-color: #595959;
+}
+input[name=searchbar]{
+	width: 130px;
+	height: 35px;
+	background:transparent;
+	color: #595959;
+	text-align: center;
+
+}
+.btn--text{
+	font-size: 17px;
+	color: white;
+	text-align: center;
+	box-shadow: none;
+}
+.btn--vertical{
+	transform:rotate(7deg);
+  -ms-transform:rotate(90deg); /* IE 9 */
+  -moz-transform:rotate(90deg); /* Firefox */
+  -webkit-transform:rotate(90deg); /* Safari and Chrome */
+
+}
+.front{
+	height: 900px;
+	width: 100%;
+	margin-top: -20px;
+}
+.front--bg{
+	background-image: url('http://www.brunomars.com/sites/g/files/g2000001576/f/201602/BrunoMars_Site_Updates_NewPanels_LiveShots_v1_1680x1000.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	transition: all 0.2s ease;
+}
+.front__header{
+	position: absolute;
+	top:0;
+	right: 80px;
+	color: white;
+	font-size: 12px;
+	font-stretch: -1px;
+	font-weight: lighter;
+	padding: 3px;
+}
+.front__header--select{
+	display: inline-block;
+	padding: 3px;
+}
+.front__header--signIn{
+	display: inline-block;
+		padding: 3px;			
+}
+.front__header--join{
+	display: inline-block;
+		padding: 3px;
+		text-decoration: none;
+		color: white;
+}
+.front__header a{
+		text-decoration: none;
+		color: white;	
+}
+.front__header a:hover{
+	color: #e60000;
+}
+
+.front__options{
+	position: absolute;
+	text-align: center;
+
+}
+
+.listen--options{
+	display: inline-block;
+	width: 100px;
+	height: 25px;
+	background-color:#262626;
+	font-size: 12px;
+	padding: 6px;
+	text-align: center;
+	cursor: pointer; 
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.listen--options:hover{
+	color: #e60000;
+}
+.listen--properties{
+	width: 90px;
+	font-size: 12px;
+	}
+.separator{
+	background-image: url('http://www.brunomars.com/sites/g/files/g2000001576/f/201602/separator.png');
+	width: 100%;
+	height: 20px;
+	margin-top: -5px;
+	top:0;
+}
+
+.signupPg{
+	background-color: #051a2e;
+	height: 600px;
+	width: 100%;
+}
+
+.signupForm{
+	align-items: center;
+}
+.signupPg__content{
+	text-align: center;
+	align-items: center;
+	align-content: center;
+	width: 600px;
+}
+.signupPg__content--heading{
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 12px;
+	transform:scale(1,1.3);
+}
+
+input[name=signupdetail]{
+	width: 300px;	
+	height: 40px;
+	margin-top: 5px;
+}
+.signupbtn{
+	border: 1px solid white;
+	width: 130px;
+	height: 35px;
+	padding-top: 5px;
+	cursor: pointer; 
+	font-size: 18px;
+}
+.signup--terms{
+	font-size: 10px;
+	padding-top: 2px;
+	transform: translateX(-7%);
+}
+
+.section-play--bg{
+	background-image: url('http://www.brunomars.com/sites/g/files/g2000001576/f/201411/bg1680.jpg');
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+	transition: all 0.2s ease;
+	z-index: -1;
+}
+.section-play{
+	height: 800px;
+	width: 100%;
+}
+
+.section-play--playbtn{
+	background-image: url('http://www.brunomars.com/sites/g/files/g2000001576/f/201411/playbutton.png');
+	width: 100px;
+	height: 70px;	
+}
+
+.section-play--others{
+	align-items: center;
+	width: 500px;
+}
+.play--two{
+	background-image: url('http://www.brunomars.com/sites/g/files/g2000001576/f/201505/Get_it_on_Google_play.svg');
+	height: 58px;
+	width: 170px;
+	display: inline-block;
+}
+.play--one{
+	background-image: url('http://www.brunomars.com/sites/g/files/g2000001576/f/201505/Get_it_on_iTunes_Badge_US_1114.svg');
+	height: 40px;
+	width: 110px;
+	display: inline-block;
+}
+.play--four{
+	background-image: url('http://www.brunomars.com/sites/g/files/g2000001576/f/201505/SPOTIFYLOGOblackbgwhitetext.svg');
+	height: 35px;
+	width: 110px;
+	display: inline-block;
+	
+}
+.play--three{
+	background-image: url('http://www.brunomars.com/sites/g/files/g2000001576/f/201505/amazon-button_desktop.png');
+	height: 35px;
+	width: 95px;
+	display: inline-block;
+}
+
+.section--image1{
+	background-image: url('http://www.brunomars.com/sites/g/files/g2000001576/f/201602/BrunoMars_Site_Updates_NewPanels_LiveShots_v2_1680x1000.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	transition: all 0.2s ease;
+	margin-top:0;
+	height: 900px;
+	width: 100%;
+	z-index: 1;
+}	
+.section--image2{
+	background-image: url('http://www.brunomars.com/sites/g/files/g2000001576/f/201602/BrunoMars_Site_Updates_NewPanels_LiveShots_v5_1680x1000-1.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	transition: all 0.2s ease;
+	margin-top: 0;
+	height: 900px;
+	width: 100%;
+	z-index: -1;
+}
+.section--image3{
+	background-image: url('http://www.brunomars.com/sites/g/files/g2000001576/f/201602/BrunoMars_Site_Updates_NewPanels_LiveShots_v5_1680x1000.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	transition: all 0.2s ease;
+	margin-top: 0;
+	height: 900px;
+	width: 100%;
+	z-index: 1;
+}
+.section--image4{
+	background-image: url('http://www.brunomars.com/sites/g/files/g2000001576/f/201602/BrunoMars_Site_Updates_NewPanels_LiveShots_v4_1680x1000.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	transition: all 0.2s ease;
+	margin-top: 0;
+	height: 900px;
+	width: 100%;
+	z-index: -1;
+}
+.section-end--bg{
+	background-image: url('http://www.brunomars.com/sites/g/files/g2000001576/f/201602/BrunoMars_Site_Updates_NewPanels_LiveShots_v3_1680x1000.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	transition: all 0.2s ease;
+	margin-top: 0;
+	height: 900px;
+	width: 100%;
+	z-index: -1;
+	position: relative;	
+}
+
+.footer{
+	position: absolute;
+	bottom: 0;
+	height: 170px;
+	width: 750px;
+	background-color: #262626;
+	border: none;
+	padding-right: 10px;
+}
+
+.footer p{
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	font-size: 18px;
+    top: -20px;
+    left: -2px;
+	margin:-10px 10px 25px 15px;
+	width: 200px;
+}
+.footer--form{
+	height: 55px;
+	margin-top: 10px;
+	display: inline-block;
+}
+input[name=footer_input]{
+	width:  220px;
+	height: 37px;
+	background-color: transparent;
+	border: 1px solid #595959;
+	margin: 2px;
+}
+input[name=footer_subscribe]{
+	color: white;
+	font-size: 18px;
+	height: 37px;
+	width: 100px;
+	padding: 7px;
+	margin: 2px;
+	text-align: center;
+	background-color: transparent;
+	border: 1px solid #595959;
+	cursor: pointer;
+}
+.footer--terms{
+	font-size: 10px;
+	padding-top: 2px;
+	transform: translateX(0%);
+}
+
+.footer_list{
+	display: flex;
+	justify-content: space-around;
+	width: 450px;
+}
+.footer_list a{
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	line-height: 25px;
+	letter-spacing: 1px;
+}	
+.footer_list a:hover{
+	color: #e60000;
+}
+
+.footer_footerbar{
+	position: absolute;
+	bottom: 0;
+    left: 0;
+    right: 0;
+	padding: 10px;
+	font-size: 9px;
+	display: flex;
+	justify-content:space-around;
+}
+.copyright{
+	padding-right: 4px;
+}
+.footer_footerbar a{
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	padding-right: 4px;
+}
+#footer-verticalLine{
+	height: 15px;
+	color: #595959;
+}
